@@ -6,6 +6,10 @@ import newsRoute from "./routes/newsRoute.js"
 import userRoute from "./routes/userRoute.js"
 import teamsRoute from "./routes/teamsRoute.js"
 
+
+import refereesRoute from "./routes/refereesRoute.js"
+
+
 dotenv.config();
 
 //connection to DB
@@ -28,6 +32,9 @@ app.use('/', pageRoute);
 app.use('/news', newsRoute);
 app.use('/user', userRoute);
 app.use('/teams', teamsRoute);
+
+app.use('/referees', refereesRoute);
+
 
 app.listen (port, ()=> {
     console.log(`running on: ${port}`);
